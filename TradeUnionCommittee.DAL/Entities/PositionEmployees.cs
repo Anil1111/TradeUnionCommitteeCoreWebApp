@@ -19,8 +19,8 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime? EndDate { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
-        public Position IdPositionNavigation { get; set; }
-        public Subdivisions IdSubdivisionNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
+        public virtual Position IdPositionNavigation { get; set; }
+        public virtual Subdivisions IdSubdivisionNavigation { get; set; }
     }
 }

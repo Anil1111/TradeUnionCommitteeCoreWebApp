@@ -12,6 +12,6 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public string ScientificTitle { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
     }
 }

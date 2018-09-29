@@ -35,7 +35,7 @@ namespace TradeUnionCommittee.BLL.Services.Search
             {
                 var employees = await _database
                     .EmployeeRepository
-                    .GetWithInclude(x => x.Id == id, p => p.PositionEmployees.IdSubdivisionNavigation.InverseIdSubordinateNavigation);
+                    .Find(x => x.Id == id);
                 listEmployee.Add(employees.Result.FirstOrDefault());
             }
 

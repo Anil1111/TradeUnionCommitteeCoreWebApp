@@ -12,7 +12,7 @@ namespace TradeUnionCommittee.DAL.Extensions
     {
         public static IServiceCollection AddUnitOfWork(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<TradeUnionCommitteeEmployeesCoreContext>(options => options.UseNpgsql(connectionString));
+            services.AddDbContext<TradeUnionCommitteeEmployeesCoreContext>(options => options.UseLazyLoadingProxies().UseNpgsql(connectionString));
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<TradeUnionCommitteeEmployeesCoreContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;

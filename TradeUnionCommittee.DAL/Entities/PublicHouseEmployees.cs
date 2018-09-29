@@ -10,7 +10,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public string NumberRoom { get; set; }
 
-        public AddressPublicHouse IdAddressPublicHouseNavigation { get; set; }
-        public Employee IdEmployeeNavigation { get; set; }
+        public virtual AddressPublicHouse IdAddressPublicHouseNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
     }
 }

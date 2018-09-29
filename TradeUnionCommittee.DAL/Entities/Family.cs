@@ -6,13 +6,6 @@ namespace TradeUnionCommittee.DAL.Entities
 {
     public class Family
     {
-        public Family()
-        {
-            ActivityFamily = new HashSet<ActivityFamily>();
-            CulturalFamily = new HashSet<CulturalFamily>();
-            EventFamily = new HashSet<EventFamily>();
-        }
-
         public long Id { get; set; }
         [ConcurrencyCheck]
         public long IdEmployee { get; set; }
@@ -25,9 +18,9 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime? BirthDate { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
-        public ICollection<ActivityFamily> ActivityFamily { get; set; }
-        public ICollection<CulturalFamily> CulturalFamily { get; set; }
-        public ICollection<EventFamily> EventFamily { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
+        public virtual ICollection<ActivityFamily> ActivityFamily { get; set; }
+        public virtual ICollection<CulturalFamily> CulturalFamily { get; set; }
+        public virtual ICollection<EventFamily> EventFamily { get; set; }
     }
 }

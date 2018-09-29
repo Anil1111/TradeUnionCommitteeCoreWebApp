@@ -47,7 +47,7 @@ namespace TradeUnionCommittee.DAL.Repositories
         {
             try
             {
-                return await Task.Run(() => new ActualResult<IEnumerable<T>> { Result = _db.Set<T>().AsNoTracking().Where(predicate).ToList() });
+                return await Task.Run(() => new ActualResult<IEnumerable<T>> { Result = _db.Set<T>().Where(predicate).ToList() });
             }
             catch (Exception e)
             {

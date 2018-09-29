@@ -8,6 +8,6 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public string Name { get; set; }
 
-        public Event Event { get; set; }
+        public virtual Event Event { get; set; }
     }
 }

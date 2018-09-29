@@ -6,15 +6,6 @@ namespace TradeUnionCommittee.DAL.Entities
 {
     public class Children
     {
-        public Children()
-        {
-            ActivityChildrens = new HashSet<ActivityChildrens>();
-            CulturalChildrens = new HashSet<CulturalChildrens>();
-            EventChildrens = new HashSet<EventChildrens>();
-            GiftChildrens = new HashSet<GiftChildrens>();
-            HobbyChildrens = new HashSet<HobbyChildrens>();
-        }
-
         public long Id { get; set; }
         [ConcurrencyCheck]
         public long IdEmployee { get; set; }
@@ -27,11 +18,11 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime BirthDate { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
-        public ICollection<ActivityChildrens> ActivityChildrens { get; set; }
-        public ICollection<CulturalChildrens> CulturalChildrens { get; set; }
-        public ICollection<EventChildrens> EventChildrens { get; set; }
-        public ICollection<GiftChildrens> GiftChildrens { get; set; }
-        public ICollection<HobbyChildrens> HobbyChildrens { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
+        public virtual ICollection<ActivityChildrens> ActivityChildrens { get; set; }
+        public virtual ICollection<CulturalChildrens> CulturalChildrens { get; set; }
+        public virtual ICollection<EventChildrens> EventChildrens { get; set; }
+        public virtual ICollection<GiftChildrens> GiftChildrens { get; set; }
+        public virtual ICollection<HobbyChildrens> HobbyChildrens { get; set; }
     }
 }

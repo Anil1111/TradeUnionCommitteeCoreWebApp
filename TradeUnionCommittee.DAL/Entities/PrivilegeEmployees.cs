@@ -14,7 +14,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public bool CheckPrivileges { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
-        public Privileges IdPrivilegesNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
+        public virtual Privileges IdPrivilegesNavigation { get; set; }
     }
 }

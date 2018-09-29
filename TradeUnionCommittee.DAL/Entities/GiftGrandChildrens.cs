@@ -19,6 +19,6 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime DateGift { get; set; }
 
-        public GrandChildren IdGrandChildrenNavigation { get; set; }
+        public virtual GrandChildren IdGrandChildrenNavigation { get; set; }
     }
 }

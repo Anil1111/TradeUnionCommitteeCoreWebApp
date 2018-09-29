@@ -15,6 +15,6 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime DatePassage { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
     }
 }

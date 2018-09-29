@@ -10,7 +10,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public long IdHobby { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
-        public Hobby IdHobbyNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
+        public virtual Hobby IdHobbyNavigation { get; set; }
     }
 }

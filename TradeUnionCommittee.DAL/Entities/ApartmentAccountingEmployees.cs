@@ -23,6 +23,6 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public int StartYearWork { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
     }
 }

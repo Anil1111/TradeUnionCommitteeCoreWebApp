@@ -19,7 +19,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime EndDate { get; set; }
 
-        public Event IdEventNavigation { get; set; }
-        public Family IdFamilyNavigation { get; set; }
+        public virtual Event IdEventNavigation { get; set; }
+        public virtual Family IdFamilyNavigation { get; set; }
     }
 }

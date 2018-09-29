@@ -6,24 +6,6 @@ namespace TradeUnionCommittee.DAL.Entities
 {
     public class Employee
     {
-        public Employee()
-        {
-            ActivityEmployees = new HashSet<ActivityEmployees>();
-            ApartmentAccountingEmployees = new HashSet<ApartmentAccountingEmployees>();
-            AwardEmployees = new HashSet<AwardEmployees>();
-            Children = new HashSet<Children>();
-            CulturalEmployees = new HashSet<CulturalEmployees>();
-            EventEmployees = new HashSet<EventEmployees>();
-            Family = new HashSet<Family>();
-            FluorographyEmployees = new HashSet<FluorographyEmployees>();
-            GiftEmployees = new HashSet<GiftEmployees>();
-            GrandChildren = new HashSet<GrandChildren>();
-            HobbyEmployees = new HashSet<HobbyEmployees>();
-            MaterialAidEmployees = new HashSet<MaterialAidEmployees>();
-            PrivateHouseEmployees = new HashSet<PrivateHouseEmployees>();
-            PublicHouseEmployees = new HashSet<PublicHouseEmployees>();
-        }
-
         public long Id { get; set; }
         [ConcurrencyCheck]
         public string FirstName { get; set; }
@@ -58,24 +40,24 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime DateAdded { get; set; }
 
-        public Education Education { get; set; }
-        public PositionEmployees PositionEmployees { get; set; }
-        public PrivilegeEmployees PrivilegeEmployees { get; set; }
-        public Scientific Scientific { get; set; }
-        public SocialActivityEmployees SocialActivityEmployees { get; set; }
-        public ICollection<ActivityEmployees> ActivityEmployees { get; set; }
-        public ICollection<ApartmentAccountingEmployees> ApartmentAccountingEmployees { get; set; }
-        public ICollection<AwardEmployees> AwardEmployees { get; set; }
-        public ICollection<Children> Children { get; set; }
-        public ICollection<CulturalEmployees> CulturalEmployees { get; set; }
-        public ICollection<EventEmployees> EventEmployees { get; set; }
-        public ICollection<Family> Family { get; set; }
-        public ICollection<FluorographyEmployees> FluorographyEmployees { get; set; }
-        public ICollection<GiftEmployees> GiftEmployees { get; set; }
-        public ICollection<GrandChildren> GrandChildren { get; set; }
-        public ICollection<HobbyEmployees> HobbyEmployees { get; set; }
-        public ICollection<MaterialAidEmployees> MaterialAidEmployees { get; set; }
-        public ICollection<PrivateHouseEmployees> PrivateHouseEmployees { get; set; }
-        public ICollection<PublicHouseEmployees> PublicHouseEmployees { get; set; }
+        public virtual Education Education { get; set; }
+        public virtual PositionEmployees PositionEmployees { get; set; }
+        public virtual PrivilegeEmployees PrivilegeEmployees { get; set; }
+        public virtual Scientific Scientific { get; set; }
+        public virtual SocialActivityEmployees SocialActivityEmployees { get; set; }
+        public virtual ICollection<ActivityEmployees> ActivityEmployees { get; set; }
+        public virtual ICollection<ApartmentAccountingEmployees> ApartmentAccountingEmployees { get; set; }
+        public virtual ICollection<AwardEmployees> AwardEmployees { get; set; }
+        public virtual ICollection<Children> Children { get; set; }
+        public virtual ICollection<CulturalEmployees> CulturalEmployees { get; set; }
+        public virtual ICollection<EventEmployees> EventEmployees { get; set; }
+        public virtual ICollection<Family> Family { get; set; }
+        public virtual ICollection<FluorographyEmployees> FluorographyEmployees { get; set; }
+        public virtual ICollection<GiftEmployees> GiftEmployees { get; set; }
+        public virtual ICollection<GrandChildren> GrandChildren { get; set; }
+        public virtual ICollection<HobbyEmployees> HobbyEmployees { get; set; }
+        public virtual ICollection<MaterialAidEmployees> MaterialAidEmployees { get; set; }
+        public virtual ICollection<PrivateHouseEmployees> PrivateHouseEmployees { get; set; }
+        public virtual ICollection<PublicHouseEmployees> PublicHouseEmployees { get; set; }
     }
 }

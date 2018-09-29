@@ -15,7 +15,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public DateTime DateIssue { get; set; }
 
-        public Award IdAwardNavigation { get; set; }
-        public Employee IdEmployeeNavigation { get; set; }
+        public virtual Award IdAwardNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
     }
 }

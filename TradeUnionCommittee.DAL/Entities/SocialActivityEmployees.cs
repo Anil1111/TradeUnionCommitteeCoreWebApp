@@ -14,7 +14,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public bool CheckSocialActivity { get; set; }
 
-        public Employee IdEmployeeNavigation { get; set; }
-        public SocialActivity IdSocialActivityNavigation { get; set; }
+        public virtual Employee IdEmployeeNavigation { get; set; }
+        public virtual SocialActivity IdSocialActivityNavigation { get; set; }
     }
 }

@@ -5,11 +5,6 @@ namespace TradeUnionCommittee.DAL.Entities
 {
     public class AddressPublicHouse
     {
-        public AddressPublicHouse()
-        {
-            PublicHouseEmployees = new HashSet<PublicHouseEmployees>();
-        }
-
         public long Id { get; set; }
         [ConcurrencyCheck]
         public string City { get; set; }
@@ -22,7 +17,7 @@ namespace TradeUnionCommittee.DAL.Entities
         [ConcurrencyCheck]
         public long Type { get; set; }
 
-        public TypeHouse TypeNavigation { get; set; }
-        public ICollection<PublicHouseEmployees> PublicHouseEmployees { get; set; }
+        public virtual TypeHouse TypeNavigation { get; set; }
+        public virtual ICollection<PublicHouseEmployees> PublicHouseEmployees { get; set; }
     }
 }
